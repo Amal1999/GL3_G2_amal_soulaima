@@ -11,9 +11,12 @@ input UpdateTodoInput {
 }
 type Subscription
 {
-    newTodo: Todo!
-    updateTodo: Todo!
-    deleteTodo: String!
+    operation : Operation
+}
+type Operation
+{
+    todo: Todo 
+    operation : String
 }
 type Query {
     getAllTodos : [Todo]

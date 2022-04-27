@@ -1,5 +1,5 @@
 export const Subscription = {
-    newTodo: {
+   /* newTodo: {
         subscribe(parent, args, { pubsub }, info) {
             return pubsub.asyncIterator('newTodo');
         }
@@ -13,5 +13,11 @@ export const Subscription = {
         subscribe(parent, args, { pubsub }, info) {
             return pubsub.asyncIterator('deleteTodo');
         }
+    },*/
+    operation : {
+        subscribe(parent, args, { pubsub }, info) {
+            return pubsub.asyncIterator("operation");
+        }
     },
+    
 }
