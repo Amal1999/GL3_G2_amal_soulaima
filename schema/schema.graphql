@@ -9,6 +9,12 @@ input UpdateTodoInput {
     userId: Int
     statut: TodoStatus
 }
+type Subscription
+{
+    newTodo: Todo!
+    updateTodo: Todo!
+    deleteTodo: String!
+}
 type Query {
     getAllTodos : [Todo]
     getTodoById(id:ID!) : Todo
@@ -31,7 +37,7 @@ type Todo{
     id: String!
     name: String!
     content: String!
-    statut: TodoStatus!
+    statut: TodoStatus
     user: User 
 }
 

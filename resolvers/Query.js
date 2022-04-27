@@ -7,7 +7,7 @@ export const Query = {
     },
     getTodoById:(_,{id})=>
     {
-        return db.todos.find((e) => e.id == id);
+        return db.todos.find((e) => e.id === id);
     },
     getUserById:(_,{id})=>
     {
