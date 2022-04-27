@@ -1,7 +1,24 @@
+input AddTodoInput {
+    name: String!
+    content: String!
+    userId: Int!
+}
+input UpdateTodoInput {
+    name: String
+    content: String
+    userId: Int
+    statut: TodoStatus
+}
 type Query {
     getAllTodos : [Todo]
     getTodoById(id:ID!) : Todo
     getUserById(id:ID!) : User
+
+}
+type Mutation {
+   addTodo(addTodoInput: AddTodoInput) : Todo
+   updateTodo(id: String,updateTodoInput: UpdateTodoInput) : Todo
+   deleteTodo(id: String) :String
 
 }
 type User{
