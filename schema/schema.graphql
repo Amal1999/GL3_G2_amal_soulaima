@@ -1,0 +1,28 @@
+type Query {
+    getAllTodos : [Todo]
+    getTodoById(id:ID!) : Todo
+    getUserById(id:ID!) : User
+
+}
+type User{
+    id: Int!
+    name: String!
+    email: String!
+    todos : [Todo!]
+}
+type Todo{
+    id: String!
+    name: String!
+    content: String!
+    statut: TodoStatus!
+    user: User 
+}
+
+enum TodoStatus 
+{
+WAITING  
+INPROGRESS 
+CANCELED 
+DONE 
+}
+
